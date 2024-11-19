@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    background: url('COnsulting-Background-1500x630.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000; /* Set body text color to black */
+}
+
+/* Header and Navigation */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Changed text color to black */
+    font-weight: bold;
+    padding: 15px 0;
+    display: inline-block;
+}
+
+/* Dropdown Styles */
+.dropbtn {
+    background-color: transparent;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    color: #000; /* Changed text color to black */
+    position: relative;
+}
+
+.dropbtn::after {
+    content: '▼';
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000; /* Changed text color to black */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Content Section */
+.content-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 80px auto;
+    padding: 20px;
+    background: rgba(250, 250, 250, 0.3);
+    color: #000; /* Changed text color to black */
+    border-radius: 10px;
+    border: 2px solid #007bff;
+}
+
+.title {
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* About, Vision, and Mission */
+.about-us, .vision, .mission {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #007bff;
+    color: #000; /* Changed text color to black */
+}
+
+/* Service Section */
+.service {
+    margin-bottom: 40px;
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(250, 250, 250, 0.3);
+}
+
+.service h2 {
+    font-size: 32px;
+    color: #000; /* Changed text color to black */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.service p {
+    font-size: 18px;
+    color: #000; /* Changed text color to black */
+}
+
+/* Button Styles */
+.button a, .nav-menu ul li a.login {
+    background-color: #007bff;
+    color: #fff; /* Keeping button text white for contrast */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

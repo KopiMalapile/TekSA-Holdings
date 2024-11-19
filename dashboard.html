@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Your Documents</h1>
+        <div class="documents">
+            <?php
+            // Assuming you have included the PHP code to retrieve documents for the user
+            session_start();
+            include 'connection.php';
+
+            if (!isset($_SESSION['user_id'])) {
+                header("Location: login.html");
+                exit();
+            }
+
+            $department_id = $_SESSION['department_id'];
+
+            // Retrieve documents for the user's department
+            $sql = "SELECT title, file_path FROM documents WHERE department_id=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $department_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<p><a href='" . htmlspecialchars($row['file_path']) . "'>" . htmlspecialchars($row['title']) . "</a></p>";
+                }
+            } else {
+                echo "<p>No documents available for your department.</p>";
+            }
+
+            $stmt->close();
+            $conn->close();
+            ?>
+        </div>
+        <div class="register-link">
+            <p><a href="admin.html">Upload New Document</a></p>
+            <p><a href="logout.php">Logout</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

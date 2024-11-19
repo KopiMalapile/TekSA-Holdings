@@ -1,0 +1,101 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background: url('COnsulting-Background-1500x630.jpg') no-repeat center center fixed; /* Background Image */
+    background-size: cover;
+    color: #fff;
+}
+
+/* Header and Navigation Bar */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 15px 0;
+    display: inline-block;
+}
+
+/* Service Section */
+.service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px; /* Padding to create space from the navbar */
+    min-height: 100vh; /* Full height section */
+}
+
+.service-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 800px; /* Maximum width for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Left-align text */
+}
+
+.service-wrapper h2 {
+    font-size: 2em;
+    color: black; /* Black font color */
+    margin-bottom: 20px;
+}
+
+.service-wrapper p {
+    color: black; /* Black font color */
+    margin-bottom: 15px;
+}
+
+.service-wrapper ul {
+    padding-left: 20px;
+    color: black; /* Black font color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .service {
+        padding: 100px 10px; /* Adjust padding for smaller screens */
+    }
+    .service-wrapper {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}

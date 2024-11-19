@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/cc2?family=Roboto:wght@200;300;400;600;700&display=swap');
+
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+
+/* Header */
+
+.header{
+    min-height: 100vh;
+    background-image: url('KK.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.navbar{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+}
+
+.navbar .logo{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 0; /* Add equal padding to top and bottom */
+    display: inline-block; /* Keeps inline behavior with proper height */
+  }
+  
+  nav ul li:hover ul {
+    display: block; /* Displays the dropdown when hovered */
+  }
+  
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures the dropdown opens below the main link */
+    left: 0;
+    background-color: #000; /* Adjust background color as needed */
+    padding: 10px 0;
+  }
+  
+  nav ul li ul li {
+    padding: 10px 20px;
+  }
+  
+  nav ul li ul li a {
+    color: #ffffff;
+  }
+  
+
+.toogle-btn{
+    position: absolute;
+    top: 28px;
+    right: 60px;
+    display: none;
+    justify-content: space-between ;
+    flex-direction: column;
+    height: 22px;
+    width: 32px;
+}
+
+.toogle-btn .bar{
+    height: 2px;
+    width: 40px;
+    background-color: #1b1a1a;
+    border-radius: 10px;
+}
+
+.content-section{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px 80px;
+}
+.content-section h1{
+    color: #fff;
+    font-size: 120px;
+    font-weight: 900px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.content-section p{
+
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 2;
+    text-transform: none;
+}
+
+.content-section .button{
+
+    margin-top: 25px;
+}
+
+.content-section .button a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    background-color: #110606;
+    border-radius: 5px;
+    padding: 14px 5px;
+    letter-spacing: 1.5px;
+
+}
+
+.wrapper {
+    font-family: 'Courier New', Courier, monospace;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255 .2);
+    backdrop-filter: blur(50px);
+    box-shadow:( 2, 2, 2, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+
+}
+
+.wrapper h1{
+   
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+ 
+    width: 900%;
+    height: 100%;
+    background: transparent;
+    margin: 30px 0;
+}
+
+/* Basic styling for the login dropdown */
+.login-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .login-menu .login-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .login-menu:hover .login-dropdown {
+    display: block;
+  }
+  
+  .login-dropdown li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .login-dropdown li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .login-dropdown li a:hover {
+    background-color: #007bff; /* Adjust to your preferred hover color */
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+
+
+/* Dropdown Styles */
+.dropbtn {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+.dropbtn::after {
+    content: '▼';
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(135deg, #1e1e1e, #575757);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+    border-radius: 5px;
+}
+/* Dropdown Styles */
+.dropbtn {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+.dropbtn::after {
+    content: '▼';
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(135deg, #1e1e1e, #575757);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+
+  .button a, .nav-menu ul li a.login {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+  @media print{
+    footer {page-break-after: always;}
+    }
+  
