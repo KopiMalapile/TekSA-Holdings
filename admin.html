@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <title>Admin Dashboard</title>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Upload Document</h1>
-        <form action="upload.php" method="POST" enctype="multipart/form-data">
-            <div class="input-box">
-                <input type="text" name="title" placeholder="Document Title" required>
-                <i class='bx bxs-file'></i>
-            </div>
-            <div class="input-box">
-                <select name="department" required>
-                    <option value="">Select Department</option>
-                    <!-- Populate this with departments from the database -->
-                    <option value="1">MVP</option>
-                    <option value="2">RISK</option>
-                    <option value="3">INVEST</option>
-                    <!-- Add more options as needed -->
-                </select>
-                <i class='bx bxs-buildings'></i>
-            </div>
-            <div class="input-box">
-                <input type="file" name="file" required>
-                <i class='bx bxs-upload'></i>
-            </div>
-            <button type="submit" class="btn">Upload Document</button>
-        </form>
-        <div class="register-link">
-            <p><a href="dashboard.html">Go to Dashboard</a></p>
+    <div class="sidebar">
+        <h2>Admin Portal</h2>
+        <a href="admin.html">Overview</a>
+        <a href="user_management.html">User Management</a>
+        <a href="analytics.html">Platform Analytics</a>
+        <a href="system_reports.html">System Reports</a>
+        <a href="settings.html">System Settings</a>
+        <a href="logs.html">Activity Logs</a>
+        <a href="support_tickets.html">Support Tickets</a>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>Oversee and manage platform-wide operations.</p>
+        </div>
+
+        <div class="card">
+            <h3>User Management</h3>
+            <p>Manage platform users, assign roles, and oversee permissions.</p>
+            <button class="btn">Go to User Management</button>
+        </div>
+
+        <div class="card">
+            <h3>Platform Analytics</h3>
+            <p>Analyze user engagement, traffic, and system performance.</p>
+            <button class="btn">View Analytics</button>
+        </div>
+
+        <div class="card">
+            <h3>System Reports</h3>
+            <p>Generate detailed reports on platform activity and usage trends.</p>
+            <button class="btn">Generate Reports</button>
+        </div>
+
+        <div class="card">
+            <h3>Activity Logs</h3>
+            <p>View system activity logs to monitor security and troubleshoot issues.</p>
+            <button class="btn">View Logs</button>
+        </div>
+
+        <div class="card">
+            <h3>Support Tickets</h3>
+            <p>Manage user-reported issues and track resolution statuses.</p>
+            <button class="btn">Manage Tickets</button>
         </div>
     </div>
 </body>
