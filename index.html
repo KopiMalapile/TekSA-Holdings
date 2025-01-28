@@ -108,15 +108,90 @@
             </div>
         </div>
         
-        <script src="path_to_flaticon_script/flaticon.js"></script>
+        <!-- Include Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-        <a href="chat.html" class="chat-button">Chat to Us</a>
+<!-- Chat Button -->
+<a href="chat.html" class="chat-button" aria-label="Chat with us">
+    <i class="fas fa-comments"></i> Chat to Us
+</a>
 
     </body>
 
     
     </html>
     <style>
+
+        /* Chat Button Styles */
+.chat-button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #007bff; /* Primary blue background */
+    color: #ffffff; /* White text */
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px; /* Adjusted for better responsiveness */
+    border-radius: 50px; /* Fully rounded button */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers text and icon */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+    z-index: 1000; /* Always visible */
+    cursor: pointer;
+}
+
+.chat-button i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 18px; /* Icon size */
+}
+
+.chat-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Smaller Screen Adjustments */
+@media (max-width: 768px) {
+    .chat-button {
+        font-size: 14px; /* Reduce font size */
+        padding: 10px 16px; /* Adjust padding */
+    }
+
+    .chat-button i {
+        font-size: 16px; /* Adjust icon size */
+        margin-right: 8px;
+    }
+}
+
+/* Very Small Screen Adjustments */
+@media (max-width: 480px) {
+    .chat-button {
+        font-size: 12px; /* Further reduce font size */
+        padding: 8px 12px; /* Compact padding */
+    }
+
+    .chat-button i {
+        font-size: 14px; /* Smaller icon */
+        margin-right: 5px;
+    }
+}
+
+/* Accessibility for High Contrast Mode */
+@media (prefers-contrast: high) {
+    .chat-button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: 2px solid #ffffff; /* Add border for better visibility */
+    }
+
+    .chat-button:hover {
+        background-color: #0056b3;
+    }
+}
+
     /* General Footer Styles */
 footer {
     background-color: #ffffff; /* White background for the footer */
