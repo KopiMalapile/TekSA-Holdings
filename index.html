@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TekSA Holdings</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="slides.css">
+    <link rel="stylesheet" href="footer.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -29,23 +31,27 @@
                 <div class="nav-menu">
                     <ul>
                         <li><a href="index.html">HOME</a></li>
-                        <li>
-                            <div class="dropdown">
-                                <button class="dropbtn">ABOUT US</button>
-                                <div class="dropdown-content">
-                                    <a href="aboutus.html">ABOUT US</a>
-                                    <a href="partners.html">PARTNERS</a>
-                                    <a href="portfolio.html">PORTFOLIO</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="ourservices.html">OUR SERVICES</a></li>
-                        <li><a href="project.html">PROJECTS</a></li>
+                        <li><a href="aboutus.html">ABOUT</a></li>
+                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                        <li><a href="ourservices.html">SERVICES</a></li>
                         <li><a href="contact.html">CONTACT</a></li>
-                        <li><a href="clientsupport.html" style="color: #007bff;">CLIENT SUPPORT</a></li>
-                        <li class="login-menu">
-                            <a class="login" href="login.html">LOGIN</a>
-                            <ul class="login-dropdown">
+                        <li>
+                            <button class="menu-toggle" id="menuToggle">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Dropdown Menu -->
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="portfolio.html">Our Portfolio</a></li>
+                    <li><a href="ourservices.html">Our Services</a></li>
+                    <li><a href="partners.html">Our Partners</a></li>
+                    <li><a href="clientsupport.html">Client Support</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
                               <li><a href="login.html">LOGIN</a></li>
                               <li><a href="registerForm.html">REGISTER</a></li>
                             </ul>
@@ -57,25 +63,32 @@
                 </div>
             </nav>
         </div>
-        <br><br>
-    
-        <div class="content-section">
-            <div class="wrapper">
-                <h1>Teksa Holdings</h1>
-
-                <br>
-
-                <p>TekSA Holdings (Pty) Ltd (“TekSA”) is an IT solutions company that provides businesses with end-to-end services in business analysis, systems
-                    development, and project management. We specialize in low-code/no-code solutions and follow an agile methodology for development. Our team works 
-                    closely with clients to understand their needs and requirements, conducting thorough business analysis to ensure that their technology solutions 
-                    align with clients' business goals.</p>
-
-                    <br><br>
-
-                <div class="button">
-                    <a href="aboutus.html" style="background-color:  #007bff;">READ MORE..</a>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide slide1">
+                    <div class="slide-content">
+                        <h1>Teksa Holdings</h1>
+                        <p>TekSA Holdings (Pty) Ltd ("TekSA") is an IT solutions company that provides businesses with end-to-end services in business analysis, systems
+                            development, and project management.</p>
+                        <a href="aboutus.html" class="carousel-btn">READ MORE..</a>
+                    </div>
+                </div>
+                <div class="carousel-slide slide2">
+                    <div class="slide-content">
+                        <h1>Business Analysis</h1>
+                        <p>We specialize in low-code/no-code solutions and follow an agile methodology for development.</p>
+                        <a href="ourservices.html" class="carousel-btn">OUR SERVICES</a>
+                    </div>
+                </div>
+                <div class="carousel-slide slide3">
+                    <div class="slide-content">
+                        <h1>Client Solutions</h1>
+                        <p>Our team works closely with clients to understand their needs and requirements, ensuring technology solutions align with business goals.</p>
+                        <a href="contact.html" class="carousel-btn">CONTACT US</a>
+                    </div>
                 </div>
             </div>
+            <div class="carousel-dots"></div>
         </div>
         <div class="services-section">
             <div class="services-header">
@@ -83,7 +96,7 @@
                 <p class="services-description">Over the past 5 years we have provided extensive IT advisory and consulting services to clients in the public and private sector.</p>
             </div>
             
-            <div class="service-box">
+            <div class="service-box reveal reveal--slide delay-1">
                 <div class="icon">
                     <i class="flaticon flaticon-access-control"></i>
                 </div>
@@ -91,7 +104,7 @@
                 <p class="description">We have executed a large-scale Enterprise Architecture project for the Tshwane University of Technology...</p>
             </div>
         
-            <div class="service-box">
+            <div class="service-box reveal reveal--slide delay-2">
                 <div class="icon">
                     <i class="flaticon flaticon-digital-strategy"></i>
                 </div>
@@ -99,7 +112,7 @@
                 <p class="description">We have executed EA/ICT Advisory work for 22 ON SLOANE, the largest Tech Hub in Africa.</p>
             </div>
         
-            <div class="service-box">
+            <div class="service-box reveal reveal--slide delay-3">
                 <div class="icon">
                     <i class="flaticon flaticon-innovation-1"></i>
                 </div>
@@ -108,6 +121,115 @@
             </div>
         </div>
         
+        <!-- OUR EXPERTISE (stacked blue layout) -->
+  <section id="services" class="expertise-wrap" aria-labelledby="expertise-heading">
+    <div class="expertise-hero">
+      <div class="expertise-header">
+        <h2 id="expertise-heading">OUR EXPERTISE</h2>
+        <p>We provide end-to-end IT solutions and consulting services to help businesses thrive in the digital age.</p>
+      </div>
+
+      <div class="expertise-list" role="list">
+
+        <!-- IT Consulting -->
+        <a class="expertise-row tone-1" href="ourservices.html#it-consulting" role="listitem" aria-label="Learn more about IT Consulting Services">
+          <div class="expertise-left">
+            <h3>IT Consulting Services</h3>
+          </div>
+          <div class="expertise-right">
+            <p>Transform your business with our expert IT consulting services. We help you navigate the complex IT landscape and implement solutions that drive growth.</p>
+          </div>
+          <span class="expertise-chevron" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <!-- Digital Solutions -->
+        <a class="expertise-row tone-2" href="ourservices.html#digital-solutions" role="listitem" aria-label="Learn more about Digital Solutions Development">
+          <div class="expertise-left">
+            <h3>Digital Solutions Development</h3>
+          </div>
+          <div class="expertise-right">
+            <p>Drive innovation and agility with our AI-powered digital solutions. We create custom software and applications tailored to your business needs.</p>
+          </div>
+          <span class="expertise-chevron" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <!-- Risk Management -->
+        <a class="expertise-row tone-3" href="ourservices.html#risk-management" role="listitem" aria-label="Learn more about Risk Management Services">
+          <div class="expertise-left">
+            <h3>Risk Management Services</h3>
+          </div>
+          <div class="expertise-right">
+            <p>Protect your assets and future-proof your business with our comprehensive risk management services. We identify and mitigate potential threats.</p>
+          </div>
+          <span class="expertise-chevron" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <!-- Investment -->
+        <a class="expertise-row tone-1" href="ourservices.html#investment" role="listitem" aria-label="Learn more about Investment Services">
+          <div class="expertise-left">
+            <h3>Investment Services</h3>
+          </div>
+          <div class="expertise-right">
+            <p>Grow your wealth and achieve your financial goals with Teksa's innovative investment services. We provide strategic investment advice and solutions.</p>
+          </div>
+          <span class="expertise-chevron" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <!-- IT Product Selling -->
+        <a class="expertise-row tone-2" href="ourservices.html#product-selling" role="listitem" aria-label="Learn more about IT Product Selling">
+          <div class="expertise-left">
+            <h3>IT Product Selling</h3>
+          </div>
+          <div class="expertise-right">
+            <p>Empower your business with cutting-edge tech solutions from top global vendors through our channel partnerships and product selling services.</p>
+          </div>
+          <span class="expertise-chevron" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        <!-- Why Partner -->
+        <a class="expertise-row tone-3" href="ourservices.html#why-teksa" role="listitem" aria-label="Learn more about Why Partner with Teksa">
+          <div class="expertise-left">
+            <h3>Why Partner with Teksa</h3>
+          </div>
+          <div class="expertise-right">
+            <p>Partner with Teksa Holdings for innovation, growth, and success in the digital era. We are committed to your business success.</p>
+          </div>
+          <span class="expertise-chevron" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Logo Stepper Section -->
+  <section class="logo-stepper-section">
+      <div class="container">
+          <h2>Our Partners</h2>
+          <div class="logo-stepper">
+              <div class="logo-track">
+                  <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="logo-item">
+                  <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="logo-item">
+                  <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="logo-item">
+                  <img src="https://logo.clearbit.com/netflix.com" alt="Netflix" class="logo-item">
+                  <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" class="logo-item">
+                  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="logo-item">
+                  <img src="https://logo.clearbit.com/tesla.com" alt="Tesla" class="logo-item">
+                  <img src="https://logo.clearbit.com/meta.com" alt="Meta" class="logo-item">
+                  <img src="https://logo.clearbit.com/openai.com" alt="OpenAI" class="logo-item">
+                  <img src="https://logo.clearbit.com/nvidia.com" alt="NVIDIA" class="logo-item">
+                  <img src="https://logo.clearbit.com/intel.com" alt="Intel" class="logo-item">
+                  <img src="https://logo.clearbit.com/sony.com" alt="Sony" class="logo-item">
+                  <img src="https://logo.clearbit.com/paypal.com" alt="PayPal" class="logo-item">
+                  <img src="https://logo.clearbit.com/uber.com" alt="Uber" class="logo-item">
+                  <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="logo-item">
+                  <img src="https://logo.clearbit.com/slack.com" alt="Slack" class="logo-item">
+                  <img src="https://logo.clearbit.com/stripe.com" alt="Stripe" class="logo-item">
+                  <img src="https://logo.clearbit.com/shopify.com" alt="Shopify" class="logo-item">
+              </div>
+          </div>
+      </div>
+  </section>
+
         <!-- Include Font Awesome for Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -116,9 +238,30 @@
     <i class="fas fa-comments"></i> Chat to Us
 </a>
 
+<!-- IntersectionObserver to trigger service animations -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Select elements with the `.reveal` utility class
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log('revealed:', entry.target);
+                // Add the visible class to trigger CSS transitions
+                entry.target.classList.add('in-view');
+                // Stop observing this element so it stays visible
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+});
+</script>
+
     </body>
 
-    
     </html>
     <style>
 
@@ -409,218 +552,248 @@ body {
 
 
         </style>
-        <footer>
-            <div class="footer-container">
-                <div class="footer-top">
-                    <div class="footer-logo">
-                        <img src="LOGGGGO.png" alt="Company Logo" >
-                    </div>
-                    <div class="footer-about-contact">
-                        <!-- About Section -->
-                        <div class="footer-about">
-                            <h4>About</h4>
-                            <ul class="about-list">
-                                <li><a href="#">Company History</a></li>
-                                <li><a href="#">Popular Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                
-                            </ul>
-                        </div>
-                        <!-- Get In Touch Section -->
-                        <div class="footer-contact">
-                            <h4>Get In Touch with us</h4>
-                            <ul class="contact-list">
-                                <li><i class="fas fa-map-marker-alt"></i> 10 Tasman Crescent, Midstream Hill, Gauteng, South Africa</li>
-                                <li><i class="fas fa-envelope"></i> <a href="mailto:info@teksaholdings.co.za">info@teksaholdings.co.za</a></li>
-                                <li><i class="fas fa-phone"></i> <a href="tel:+2767100620">+27 67 834 4035</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Social Icons Section -->
-                    <div class="footer-social">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        
-                    </div>
-                </div>
-                <!-- Bottom Footer Section -->
-                <div class="footer-bottom">
-                    <p>Copyright &copy; 2023 <b>Teksa Holdings</b>. All Rights Reserved.</p>
-                    <ul class="footer-links">
-                        <li><a href="#" style="color: black;">Terms of Use</a></li>
-                        <li><a href="#" style="color: black;">Privacy</a></li>
-                        <li><a href="#" style="color: black;">FAQs</a></li>
-                    </ul>
-                </div>
+ <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="LOGGGGO.png" alt="Company Logo">
+          <!-- From Uiverse.io by 0800Gonza: move social card under the logo -->
+          <div class="uiverse-social">
+            <div class="card">
+              <a href="#" class="socialContainer containerOne">
+                <svg class="socialSvg instagramSvg" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.095-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
+              </a>
+
+              <a href="#" class="socialContainer containerTwo">
+                <svg class="socialSvg twitterSvg" viewBox="0 0 16 16"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>
+              </a>
+
+              <a href="#" class="socialContainer containerThree">
+                <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+              </a>
+
+              <a href="#" class="socialContainer containerFour">
+                <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> </svg>
+              </a>
             </div>
-        </footer>
+          </div>
+        </div>
+
+        <div class="footer-about-contact">
+          <!-- About Section -->
+          <div class="footer-about">
+            <h4>About</h4>
+            <ul class="about-list">
+              <li><a href="#">Company History</a></li>
+              <li><a href="#">Popular Services</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Expert Team</a></li>
+            </ul>
+          </div>
+          <!-- Get In Touch Section -->
+          <div class="footer-contact">
+            <h4>Get In Touch with us</h4>
+            <ul class="contact-list">
+              <li><i class="fas fa-map-marker-alt"></i> 10 Tasman Crescent, Midstream Hill, Gauteng, South Africa</li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:info@teksaholdings.co.za">info@teksaholdings.co.za</a></li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+2767100620">+27 67 834 4035</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Footer Section -->
+      <div class="footer-bottom">
+        <p>© 2023 Teksa Holdings. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
         
 </div>
 
-<script src="https://teksaholdings.co.za/wp-content/themes/convis/assets/js/theme.min.js?ver=1.0.2" id="convis-theme-js"></script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/happy-elementor-addons/assets/vendor/jquery.isotope.js?ver=3.12.0" id="jquery-isotope-js"></script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/happy-elementor-addons/assets/vendor/magnific-popup/jquery.magnific-popup.min.js?ver=3.12.0" id="jquery-magnific-popup-js"></script>
-<script src="https://teksaholdings.co.za/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
-<script id="happy-elementor-addons-js-extra">
-    var HappyLocalize = {
-        "ajax_url": "https:\/\/teksaholdings.co.za\/wp-admin\/admin-ajax.php",
-        "nonce": "f99c55c05a",
-        "pdf_js_lib": "https:\/\/teksaholdings.co.za\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"
-    };
-</script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/happy-elementor-addons/assets/js/happy-addons.min.js?ver=3.12.0" id="happy-elementor-addons-js"></script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.23.4" id="elementor-webpack-runtime-js"></script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.23.4" id="elementor-frontend-modules-js"></script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
-<script src="https://teksaholdings.co.za/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-<script id="elementor-frontend-js-before">
-    var elementorFrontendConfig = {
-        "environmentMode": {
-            "edit": false,
-            "wpPreview": false,
-            "isScriptDebug": false
-        },
-        "i18n": {
-            "shareOnFacebook": "Share on Facebook",
-            "shareOnTwitter": "Share on Twitter",
-            "pinIt": "Pin it",
-            "download": "Download",
-            "downloadImage": "Download image",
-            "fullscreen": "Fullscreen",
-            "zoom": "Zoom",
-            "share": "Share",
-            "playVideo": "Play Video",
-            "previous": "Previous",
-            "next": "Next",
-            "close": "Close",
-            "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right",
-            "a11yCarouselPrevSlideMessage": "Previous slide",
-            "a11yCarouselNextSlideMessage": "Next slide",
-            "a11yCarouselFirstSlideMessage": "This is the first slide",
-            "a11yCarouselLastSlideMessage": "This is the last slide",
-            "a11yCarouselPaginationBulletMessage": "Go to slide"
-        },
-        "is_rtl": false,
-        "breakpoints": {
-            "xs": 0,
-            "sm": 480,
-            "md": 768,
-            "lg": 1025,
-            "xl": 1440,
-            "xxl": 1600
-        },
-        "responsive": {
-            "breakpoints": {
-                "mobile": {
-                    "label": "Mobile Portrait",
-                    "value": 767,
-                    "default_value": 767,
-                    "direction": "max",
-                    "is_enabled": true
-                },
-                "mobile_extra": {
-                    "label": "Mobile Landscape",
-                    "value": 880,
-                    "default_value": 880,
-                    "direction": "max",
-                    "is_enabled": false
-                },
-                "tablet": {
-                    "label": "Tablet Portrait",
-                    "value": 1024,
-                    "default_value": 1024,
-                    "direction": "max",
-                    "is_enabled": true
-                },
-                "tablet_extra": {
-                    "label": "Tablet Landscape",
-                    "value": 1200,
-                    "default_value": 1200,
-                    "direction": "max",
-                    "is_enabled": true
-                },
-                "laptop": {
-                    "label": "Laptop",
-                    "value": 1366,
-                    "default_value": 1366,
-                    "direction": "max",
-                    "is_enabled": true
-                },
-                "widescreen": {
-                    "label": "Widescreen",
-                    "value": 2400,
-                    "default_value": 2400,
-                    "direction": "min",
-                    "is_enabled": false
-                }
-            }
-        },
-        "version": "3.23.4",
-        "is_static": false,
-        "experimentalFeatures": {
-            "e_optimized_css_loading": true,
-            "additional_custom_breakpoints": true,
-            "container": true,
-            "container_grid": true,
-            "e_swiper_latest": true,
-            "e_nested_atomic_repeaters": true,
-            "e_onboarding": true,
-            "home_screen": true,
-            "ai-layout": true,
-            "landing-pages": true,
-            "nested-elements": true,
-            "e_lazyload": true
-        },
-        "urls": {
-            "assets": "https:\/\/teksaholdings.co.za\/wp-content\/plugins\/elementor\/assets\/",
-            "ajaxurl": "https:\/\/teksaholdings.co.za\/wp-admin\/admin-ajax.php"
-        },
-        "nonces": {
-            "floatingButtonsClickTracking": "2a11e1523f"
-        },
-        "swiperClass": "swiper",
-        "settings": {
-            "page": [],
-            "editorPreferences": []
-        },
-        "kit": {
-            "active_breakpoints": ["viewport_mobile", "viewport_tablet", "viewport_tablet_extra", "viewport_laptop"],
-            "lightbox_enable_counter": "yes",
-            "lightbox_enable_fullscreen": "yes",
-            "lightbox_enable_zoom": "yes",
-            "lightbox_enable_share": "yes",
-            "lightbox_title_src": "title",
-            "lightbox_description_src": "description"
-        },
-        "post": {
-            "id": 3843,
-            "title": "Teksa%20Holdings%20%E2%80%93%20Processes%20Re-engineering%20",
-            "excerpt": "",
-            "featuredImage": false
+  <script>
+    try { document.getElementById('footer-year').textContent = new Date().getFullYear(); } catch(e) {}
+  </script>
+
+  <!-- External scripts with defer for performance -->
+  <script src="https://teksaholdings.co.za/wp-content/themes/convis/assets/js/theme.min.js?ver=1.0.2" id="convis-theme-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/happy-elementor-addons/assets/vendor/jquery.isotope.js?ver=3.12.0" id="jquery-isotope-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/happy-elementor-addons/assets/vendor/magnific-popup/jquery.magnific-popup.min.js?ver=3.12.0" id="jquery-magnific-popup-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js" defer></script>
+  <script id="happy-elementor-addons-js-extra">
+      var HappyLocalize = {
+          "ajax_url": "https:\/\/teksaholdings.co.za\/wp-admin\/admin-ajax.php",
+          "nonce": "f99c55c05a",
+          "pdf_js_lib": "https:\/\/teksaholdings.co.za\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"
+      };
+  </script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/happy-elementor-addons/assets/js/happy-addons.min.js?ver=3.12.0" id="happy-elementor-addons-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.23.4" id="elementor-webpack-runtime-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.23.4" id="elementor-frontend-modules-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js" defer></script>
+  <script src="https://teksaholdings.co.za/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js" defer></script>
+  <script id="elementor-frontend-js-before">
+      var elementorFrontendConfig = {
+          "environmentMode": {"edit": false, "wpPreview": false, "isScriptDebug": false},
+          "i18n": {
+              "shareOnFacebook": "Share on Facebook",
+              "shareOnTwitter": "Share on Twitter",
+              "pinIt": "Pin it",
+              "download": "Download",
+              "downloadImage": "Download image",
+              "fullscreen": "Fullscreen",
+              "zoom": "Zoom",
+              "share": "Share",
+              "playVideo": "Play Video",
+              "previous": "Previous",
+              "next": "Next",
+              "close": "Close",
+              "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right",
+              "a11yCarouselPrevSlideMessage": "Previous slide",
+              "a11yCarouselNextSlideMessage": "Next slide",
+              "a11yCarouselFirstSlideMessage": "This is the first slide",
+              "a11yCarouselLastSlideMessage": "This is the last slide",
+              "a11yCarouselPaginationBulletMessage": "Go to slide"
+          },
+          "is_rtl": false,
+          "breakpoints": {"xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600},
+          "responsive": {
+              "breakpoints": {
+                  "mobile": {"label": "Mobile Portrait","value": 767,"default_value": 767,"direction": "max","is_enabled": true},
+                  "mobile_extra": {"label": "Mobile Landscape","value": 880,"default_value": 880,"direction": "max","is_enabled": false},
+                  "tablet": {"label": "Tablet Portrait","value": 1024,"default_value": 1024,"direction": "max","is_enabled": true},
+                  "tablet_extra": {"label": "Tablet Landscape","value": 1200,"default_value": 1200,"direction": "max","is_enabled": true},
+                  "laptop": {"label": "Laptop","value": 1366,"default_value": 1366,"direction": "max","is_enabled": true},
+                  "widescreen": {"label": "Widescreen","value": 2400,"default_value": 2400,"direction": "min","is_enabled": false}
+              }
+          },
+          "version": "3.23.4",
+          "is_static": false,
+          "experimentalFeatures": {
+              "e_optimized_css_loading": true, "additional_custom_breakpoints": true, "container": true,
+              "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true,
+              "home_screen": true, "ai-layout": true, "landing-pages": true, "nested-elements": true, "e_lazyload": true
+          },
+          "urls": {"assets": "https:\/\/teksaholdings.co.za\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/teksaholdings.co.za\/wp-admin\/admin-ajax.php"},
+          "nonces": {"floatingButtonsClickTracking": "2a11e1523f"},
+          "swiperClass": "swiper",
+          "settings": {"page": [], "editorPreferences": []},
+          "kit": {
+              "active_breakpoints": ["viewport_mobile", "viewport_tablet", "viewport_tablet_extra", "viewport_laptop"],
+              "lightbox_enable_counter": "yes",
+              "lightbox_enable_fullscreen": "yes",
+              "lightbox_enable_zoom": "yes",
+              "lightbox_enable_share": "yes",
+              "lightbox_title_src": "title",
+              "lightbox_description_src": "description"
+          },
+          "post": {"id": 3843, "title": "Teksa%20Holdings%20%E2%80%93%20Processes%20Re-engineering%20", "excerpt": "", "featuredImage": false}
+      };
+  </script>
+  <script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.4" id="elementor-frontend-js" defer></script>
+
+  <script>
+      // Error handling for dropdown functionality
+      try {
+          const loginMenu = document.querySelector('.login-menu');
+          if (loginMenu) {
+              loginMenu.addEventListener('click', function() {
+                  const dropdown = this.querySelector('.login-dropdown');
+                  if (dropdown) {
+                      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                  }
+              });
+          }
+
+          const mobileOptionBtn = document.querySelector('.mobile-option-btn');
+          const navMenu = document.querySelector('.nav-menu');
+
+          if (mobileOptionBtn && navMenu) {
+              mobileOptionBtn.addEventListener('click', () => {
+                  navMenu.classList.toggle('active');
+                  mobileOptionBtn.classList.toggle('active');
+              });
+          }
+      } catch (error) {
+          console.error('Error initializing navigation scripts:', error);
+      }
+  </script>
+
+    <script>
+        // Carousel functionality
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        let currentSlide = 0;
+        let isAutoPlaying = true;
+        let autoPlayTimer;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        // Function to go to a specific slide
+        function goToSlide(index) {
+            currentSlide = index;
+            carousel.style.transform = `translateX(-${index * 33.333}%)`;
+            updateDots();
         }
-    };
-</script>
-<script src="https://teksaholdings.co.za/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.4" id="elementor-frontend-js"></script>
 
-<script>
-    document.querySelector('.login-menu').addEventListener('click', function() {
-        const dropdown = this.querySelector('.login-dropdown');
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
+        // Update dots
+        function updateDots() {
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
 
-    const mobileOptionBtn = document.querySelector('.mobile-option-btn');
-    const navMenu = document.querySelector('.nav-menu');
+        // Auto play functionality
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                goToSlide(currentSlide);
+            }, 3000); // Change slide every 3 seconds
+        }
 
-    mobileOptionBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileOptionBtn.classList.toggle('active');
-    });
+        // Start auto play
+        startAutoPlay();
 
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayTimer);
+            isAutoPlaying = false;
+        });
 
-</script>
+        // Resume on mouse leave
+        carousel.addEventListener('mouseleave', () => {
+            if (!isAutoPlaying) {
+                startAutoPlay();
+                isAutoPlaying = true;
+            }
+        });
+    </script>
+    <!-- JavaScript for dropdown functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            
+            menuToggle.addEventListener('click', function(event) {
+                event.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+            });
 
-</body>
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+    </body>
 </html>
