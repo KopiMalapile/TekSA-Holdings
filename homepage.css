@@ -724,9 +724,8 @@ nav ul li ul li a {
 }
 
 footer {
-    background: linear-gradient(to right, #ffffff, #f4f4f4);
+    background: linear-gradient(to right, #007bff, #5e5b5b);
 }
-
 /* Mobile Option Button */
 .mobile-option-btn {
     display: none;
@@ -983,4 +982,5 @@ footer {
     height: 50px;
     min-width: 20px; /* spacer */
 }
+
 
