@@ -171,42 +171,28 @@
     </section>
     <section class="logo-stepper-section">
         <div class="container">
-            <h2>Our Client Base</h2>
+            <h2>Our Partners</h2>
             <div class="logo-stepper">
                 <div class="logo-track">
                     <!-- First set of logos -->
-                    <img src="https://logo.clearbit.com/hp.com" alt="HP" class="logo-item">
-                    <img src="https://logo.clearbit.com/aws.amazon.com" alt="AWS" class="logo-item">
                     <img src="https://logo.clearbit.com/vodacom.co.za" alt="Vodacom" class="logo-item">
                     <img src="https://logo.clearbit.com/mtn.com" alt="MTN" class="logo-item">
                     <img src="https://logo.clearbit.com/huawei.com" alt="Huawei" class="logo-item">
                     <img src="https://logo.clearbit.com/eskom.co.za" alt="Eskom" class="logo-item">
                     <img src="https://logo.clearbit.com/tut.ac.za" alt="Tshwane University of Technology" class="logo-item">
                     <img src="https://logo.clearbit.com/22onsloane.co" alt="22 on Sloane" class="logo-item">
-                    <img src="https://logo.clearbit.com/dpsa.gov.za" alt="DPSA" class="logo-item">
                     <img src="https://logo.clearbit.com/transnet.net" alt="Transnet" class="logo-item">
-                    <img src="https://logo.clearbit.com/togaf.org" alt="TOGAF" class="logo-item">
-                    <img src="https://logo.clearbit.com/fsca.co.za" alt="FSCA" class="logo-item">
                     <img src="https://logo.clearbit.com/cjc.edu.za" alt="Central Johannesburg TVET College" class="logo-item">
-                    <img src="https://logo.clearbit.com/lifehealthcare.co.za" alt="Life Healthcare" class="logo-item">
-                    <img src="https://logo.clearbit.com/telkom.co.za" alt="Telkom" class="logo-item">
                     <img src="https://logo.clearbit.com/essentialproject.co.za" alt="Essential Project" class="logo-item">
                     <!-- Duplicated set for seamless scrolling -->
-                    <img src="https://logo.clearbit.com/hp.com" alt="HP" class="logo-item">
-                    <img src="https://logo.clearbit.com/aws.amazon.com" alt="AWS" class="logo-item">
                     <img src="https://logo.clearbit.com/vodacom.co.za" alt="Vodacom" class="logo-item">
                     <img src="https://logo.clearbit.com/mtn.com" alt="MTN" class="logo-item">
                     <img src="https://logo.clearbit.com/huawei.com" alt="Huawei" class="logo-item">
                     <img src="https://logo.clearbit.com/eskom.co.za" alt="Eskom" class="logo-item">
                     <img src="https://logo.clearbit.com/tut.ac.za" alt="Tshwane University of Technology" class="logo-item">
                     <img src="https://logo.clearbit.com/22onsloane.co" alt="22 on Sloane" class="logo-item">
-                    <img src="https://logo.clearbit.com/dpsa.gov.za" alt="DPSA" class="logo-item">
                     <img src="https://logo.clearbit.com/transnet.net" alt="Transnet" class="logo-item">
-                    <img src="https://logo.clearbit.com/togaf.org" alt="TOGAF" class="logo-item">
-                    <img src="https://logo.clearbit.com/fsca.co.za" alt="FSCA" class="logo-item">
                     <img src="https://logo.clearbit.com/cjc.edu.za" alt="Central Johannesburg TVET College" class="logo-item">
-                    <img src="https://logo.clearbit.com/lifehealthcare.co.za" alt="Life Healthcare" class="logo-item">
-                    <img src="https://logo.clearbit.com/telkom.co.za" alt="Telkom" class="logo-item">
                     <img src="https://logo.clearbit.com/essentialproject.co.za" alt="Essential Project" class="logo-item">
                 </div>
             </div>
@@ -684,7 +670,7 @@
         // Function to go to a specific slide
         function goToSlide(index) {
             currentSlide = index;
-            carousel.style.transform = `translateX(-${index * 33.333}%)`;
+            carousel.style.transform = translateX(-${index * 33.333}%);
             updateDots();
         }
 
@@ -720,6 +706,175 @@
             }
         });
     </script>
+    <!-- ✅ Live Chat Widget -->
+<div id="chatWidget" class="chat-widget">
+  <div class="chat-header">
+    <span>💬 TekSA Live Chat</span>
+    <button id="closeChat">×</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <p class="bot">Hi there! 👋 How can we help you today?</p>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chatInput" placeholder="Type your message..." />
+    <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- ✅ Chat Button -->
+<a href="#" id="openChat" class="chat-button">
+  <i class="fas fa-comments"></i> Chat to Us
+</a>
+
+<script>
+  // Simple live chat interactivity
+  const openChat = document.getElementById('openChat');
+  const chatWidget = document.getElementById('chatWidget');
+  const closeChat = document.getElementById('closeChat');
+  const sendChat = document.getElementById('sendChat');
+  const chatInput = document.getElementById('chatInput');
+  const chatBody = document.getElementById('chatBody');
+
+  openChat.addEventListener('click', e => {
+    e.preventDefault();
+    chatWidget.classList.add('show');
+    openChat.style.display = 'none';
+  });
+
+  closeChat.addEventListener('click', () => {
+    chatWidget.classList.remove('show');
+    openChat.style.display = 'flex';
+  });
+
+  sendChat.addEventListener('click', () => {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    const msg = document.createElement('p');
+    msg.className = 'user';
+    msg.textContent = text;
+    chatBody.appendChild(msg);
+    chatInput.value = '';
+    chatBody.scrollTop = chatBody.scrollHeight;
+    // Simulated bot reply
+    setTimeout(() => {
+      const bot = document.createElement('p');
+      bot.className = 'bot';
+      bot.textContent = "Thanks! We'll get back to you soon 😊";
+      chatBody.appendChild(bot);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 1000);
+  });
+</script>
+
+<style>
+  /* 🔹 Chat Widget */
+  .chat-widget {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2000;
+    border: 2px solid #007bff;
+  }
+  .chat-widget.show { display: flex; animation: fadeIn 0.3s ease; }
+  .chat-header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+  }
+  .chat-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f1f3f6;
+  }
+  .chat-body p {
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
+  .chat-body p.bot {
+    background: #007bff;
+    color: white;
+    align-self: flex-start;
+  }
+  .chat-body p.user {
+    background: #e0e0e0;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  .chat-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  #chatInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  #sendChat {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #sendChat:hover { background: #0056b3; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 🔹 "Our Partners" Styling */
+  .logo-stepper-section {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #eaf2ff 0%, #f8f9fa 100%);
+    overflow: hidden;
+    text-align: center;
+  }
+  .logo-stepper-section h2 {
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+  }
+  .logo-item {
+    height: 70px !important;
+    filter: grayscale(0%);
+    opacity: 0.9;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .logo-item:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+</style>
+
 </body>
 </html>
-
